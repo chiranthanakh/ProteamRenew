@@ -11,7 +11,7 @@ package com.proteam.renew.utilitys;
 
 
 /**
- * Created by Shashi on 10/9/2017.
+ * Created by Chiranthan on 08/07/2022.
  */
 
 public interface OnResponseListener<T> {
