@@ -23,10 +23,16 @@
         android:theme="@style/Theme.Renew"
         tools:targetApi="31">
         <activity
+            android:name=".views.WorkerDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".views.WorkerListActivity"
             android:exported="false" />
         <activity
             android:name=".views.AttendenceApproveActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.WorkerInformationActivity"
             android:exported="false" />
         <activity
             android:name=".views.WorkerInformationNext2Activity"

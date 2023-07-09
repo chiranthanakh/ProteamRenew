@@ -1,5 +1,6 @@
 package com.proteam.renew.views
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.AutoCompleteTextView
@@ -20,5 +21,15 @@ class WorkerInformationNext2Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_worker_information_next2)
+
+        tv_previous_two.setOnClickListener {
+            val intent = Intent(applicationContext, WorkerInformationNext1Activity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
     }
 }

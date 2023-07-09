@@ -1,10 +1,12 @@
 package com.proteam.renew.views
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.AutoCompleteTextView
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import com.proteam.renew.R
 
 class WorkerInformationActivity : AppCompatActivity() {
@@ -21,10 +23,18 @@ class WorkerInformationActivity : AppCompatActivity() {
     val sp_state: AutoCompleteTextView by lazy { findViewById<AutoCompleteTextView>(R.id.sp_state) }
     val sp_location: AutoCompleteTextView by lazy { findViewById<AutoCompleteTextView>(R.id.sp_location) }
     val edt_pincode: EditText by lazy { findViewById<EditText>(R.id.edt_pincode) }
+
     val tv_next_one: TextView by lazy { findViewById<TextView>(R.id.tv_next_one) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_worker_information)
+
+        tv_next_one.setOnClickListener {
+
+            val intent = Intent(applicationContext, WorkerInformationNext1Activity::class.java)
+            startActivity(intent)
+
+        }
     }
 }

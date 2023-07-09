@@ -1,5 +1,6 @@
 package com.proteam.renew.views
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.AutoCompleteTextView
@@ -23,12 +24,31 @@ class WorkerInformationNext1Activity : AppCompatActivity() {
     val sp_report_is_ok: AutoCompleteTextView by lazy { findViewById<AutoCompleteTextView>(R.id.sp_report_is_ok) }
 
 
-    val tv_previous: TextView by lazy { findViewById<AutoCompleteTextView>(R.id.tv_previous) }
-    val tv_next_two: TextView by lazy { findViewById<AutoCompleteTextView>(R.id.tv_next_two) }
+    val tv_previous: TextView by lazy { findViewById<TextView>(R.id.tv_previous) }
+    val tv_next_two: TextView by lazy { findViewById<TextView>(R.id.tv_next_two) }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_worker_information_next1)
+
+        tv_next_two.setOnClickListener {
+
+            val intent = Intent(applicationContext, WorkerInformationNext2Activity::class.java)
+            startActivity(intent)
+
+        }
+
+        tv_previous.setOnClickListener {
+
+            val intent = Intent(applicationContext, WorkerInformationActivity::class.java)
+            startActivity(intent)
+
+        }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
     }
 }
