@@ -21,6 +21,8 @@ public class ApprovalsActivity extends AppCompatActivity implements View.OnClick
         ll_OnBoard_approval.setOnClickListener(this);
         ll_attendance_approval = findViewById(R.id.ll_attendance_approval);
         ll_attendance_approval.setOnClickListener(this);
+        ll_training_approval = findViewById(R.id.ll_training_approval);
+        ll_training_approval.setOnClickListener(this);
     }
 
     @Override
@@ -37,6 +39,12 @@ public class ApprovalsActivity extends AppCompatActivity implements View.OnClick
 
                 Intent intentAttendence= new Intent(ApprovalsActivity.this, AttendenceApproveActivity.class);
                 startActivity(intentAttendence);
+                break;
+
+            case R.id.ll_training_approval:
+
+                Intent intentList= new Intent(ApprovalsActivity.this, WorkerListActivity.class);
+                startActivity(intentList);
                 break;
 
 
